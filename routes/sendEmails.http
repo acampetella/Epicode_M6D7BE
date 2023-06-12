@@ -1,0 +1,8 @@
+
+POST http://localhost:5050/sendMail HTTP/1.1
+content-type: application/json
+
+{"destination":"andrea.campetella@libero.it",
+"subject":"Test",
+"message":"Test utilizzo variabili d'ambiente"
+}

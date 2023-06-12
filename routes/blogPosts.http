@@ -1,0 +1,91 @@
+GET http://localhost:5050/blogPosts
+
+
+#######
+
+GET http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436/comments
+
+
+#######
+
+GET http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436/comments/647fbd5d9e549fe6d27fea98
+
+#######
+
+POST   http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Giulia Baiocco",
+  "commentText": "Questo è il terzo commento al post"
+}
+
+#######
+
+PATCH   http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436/comments/647fc00b9e549fe6d27feadc HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Giulia Baiocco",
+  "commentText": "Questo è il terzo commento con modifica solo al testo"
+}
+
+#######
+
+DELETE http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436/comments/647fc0379e549fe6d27feaec
+
+
+#######
+
+
+POST http://localhost:5050/blogPosts HTTP/1.1
+content-type: application/json
+
+{
+  "category": "General",
+  "title": "Titolo5",
+  "author": {
+    "name": "Diletta",
+    "avatar": "https://picsum.photos/200/200"
+  },
+  "cover": "https://picsum.photos/1920/1080",
+  "content": "Eu incididunt pariatur incididunt enim mollit sit quis culpa do amet ad reprehenderit mollit proident. Lorem sunt elit deserunt exercitation anim laborum. In reprehenderit consequat officia ipsum ullamco sunt cillum id. Enim excepteur qui ut adipisicing."
+}
+
+
+#######
+
+POST http://localhost:5050/blogPosts/647f92fb0db53f2478d3e436 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Francesca Baiocco",
+  "commentText": "Questo è il terzo commento al post"
+}
+
+#######
+
+GET http://localhost:5050/blogPosts/646e5b0eda8a852bac56d8ea
+
+
+#######
+
+GET http://localhost:5050/blogPosts/byTitle/Ciao
+
+
+#######
+
+
+PATCH http://localhost:5050/blogPosts/646e5b0eda8a852bac56d8ea HTTP/1.1
+content-type: application/json
+
+{
+  "author": {
+    "name": "Marco"
+  }
+}
+
+#######
+
+
+DELETE  http://localhost:5050/blogPosts/646f151990407d619b645a2e
